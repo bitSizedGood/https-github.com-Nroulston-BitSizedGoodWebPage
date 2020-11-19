@@ -10,6 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_11_19_042852) do
+
+  create_table "non_profits", force: :cascade do |t|
+    t.string "why"
+    t.string "what_achieve"
+    t.string "website"
+    t.string "name"
+    t.string "contact"
+    t.string "contact_info"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
