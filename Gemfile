@@ -12,11 +12,12 @@ gem 'bootsnap',   '1.4.6', require: false
 gem 'materialize-sass', '~> 1.0.0'
 gem 'jquery-rails'
 gem 'simple_form'
-
+gem 'phony_rails'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
