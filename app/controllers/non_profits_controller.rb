@@ -2,8 +2,9 @@ class NonProfitsController < ApplicationController
 
   def create
     @non_profit = NonProfit.new(non_profit_params)
-    @non_profit.normalize_phone_number
-    byebug
+
+  
+
     if @non_profit.save
       render :show
     end

@@ -9,7 +9,7 @@ class NonProfit < ApplicationRecord
 end
 
 def normalize_phone_number
-    if self.contact != nil
-      self.contact.phony_formatted!(normalize: :US, format: :international ) 
+    if self.contact_info != nil
+      self.contact_info.phony_formatted!(normalize: :US, format: :international ) 
     end
 end
