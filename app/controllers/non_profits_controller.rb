@@ -2,8 +2,8 @@ class NonProfitsController < ApplicationController
 
   def create
     @non_profit = NonProfit.new(non_profit_params)
-    byebug
     @non_profit.normalize_phone_number
+    byebug
     if @non_profit.save
       render :show
     end
@@ -16,3 +16,4 @@ class NonProfitsController < ApplicationController
     params.require(:non_profit).permit(:why, :what_achieve, :website, :name, :contact, :contact_info)
   end
 end
+  
