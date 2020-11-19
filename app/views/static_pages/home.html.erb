@@ -4,113 +4,109 @@
       <br><br>
       <h1 class="header center teal-text text-lighten-2">Bit Sized Good</h1>
       <div class="row center">
-        <h4 class=" col s12 "> Helping Non-Profits solve their Web problems </h4>
+        <h5 class="header col s12 light">Helping Non-Profits solve their Web problems</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-      </div>
+          <a href="#parallax-bottom" id="download-button" class="btn-large waves-effect waves-light teal  ">Come work with us</a>
+        </div>
       <br><br>
 
     </div>
   </div>
-  <div class='parallax' >
-    <%= image_tag "background1.jpg" %> 
-  </div>
+  <div class="parallax"><%= image_tag "background1.jpg", alt: "Unsplashed background img 1" %></div>
 </div>
 
 
-<div class="container">
-  <div class="section">
-    <!--   Icon Section   -->
-    <div class="row">
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">UI Design</i></h2>
-          <h5 class="center">User Experience Focused</h5>
 
-          <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-        </div>
-      </div>
-    
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons"> Web Dev </i></h2>
-          <h5 class="center">Custom Solutions</h5>
-          <p class="light">We do the heavy lifting for you to provide an elegent solution for your users. Elegance boils down to easy to use solutions that stand the test of time. All we ask is that you step away from your current solution and let us build the foundations of a website that can be built upon for whatever challenges you want to summit next. </p>
-        </div>
-      </div>
-      
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">UX Research</i></h2>
-          <h5 class="center">Easy to work with</h5>
-
-          <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <div class="row center">
-        <h5 class="header col s12 light">We are a team gaining experience while helping to change the world.</h5>
-      </div>
-    </div>
-  </div>
   <div class="container">
     <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">UI Design</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">Developer Team</i></h2>
+            <h5 class="center">Custom Solutions</h5>
+
+            <p class="light">We do the heavy lifting for you to provide an elegent solution for your users. Elegance boils down to easy to use solutions that stand the test of time. All we ask is that you step away from your current solution and let us build the foundations of a website that can be built upon for whatever challenges you want to summit next. </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">UX Research</i></h2>
+            <h5 class="center">Easy to work with</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">We are a team gaining experience while helping to change the world.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"> <%= image_tag  "background2.jpg", alt: "Unsplashed background img 2"%></div>
+  </div>
+
+<div class="container">
+    <div class="section">
+
       <div class="row">
         <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Tell us how we can help you</h4>
-                      <% if flash[:errors] %>
-                     <% flash[:errors].each do |error|   %>
-                     <li class="red"> <%= error %></li>
-                  <% end %>
+          <h3><i class="mdi-content-send brown-text"> 
+             <h4>Contact Us</h4></i>
+          </h3>
+              <% if flash[:errors] %>
+                    <% flash[:errors].each do |error|   %>
+                    <li class="red"> <%= error %></li>
                 <% end %>
-          <p class="left-align light"></p>
+              <% end %>
+         
         </div>
       </div>
+
     </div>
   </div>
-    <div class='parallax' > <%= image_tag "background2.jpg", alt: "Unsplashed background img 2" %></div>
-</div>
-
-
-  <div class="parallax-container valign-wrapper ">
-    <div class="section no-pad-bot">              
-      <div class="container">
-        <div class="row center" style='opacity: 0.9;' id='parallax-bottom'>
-          <h5 class="header col s12 light">????????</h5>
-            <%= simple_form_for NonProfit.new, html: { class: "col s12 new_non_profit white "} do |f| %>
-             <div class="row" >
-                  <%= f.input :name,error: 'Username is mandatory, please specify one', wrapper_html: { class: 'input-field col s6 l6'}, input_html: { class: 'validate' } %>
-                  <%= f.input :website, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
-                  <%= f.input :what_achieve, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
-                  <%= f.input :contact, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
-                  <%= f.input :contact_info, wrapper_html: { class: 'input-field col s12 l12 ' }, input_html: { class: 'validate' } %>
-                  <%= f.input :why, as: :text, wrapper_html: { class: 'input-field col s12 l12 m12 ', style:'textarea1' }, input_html: { class: 'validate ',style:'textarea1', type: 'text' } %>
-                  <%= f.button :submit %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-                    
-                
   
-                
-    <%# TODO Need to add class parallax to the div below and get it working. %>
+<div class="parallax-container valign-wrapper ">
+  <div class="section no-pad-bot">              
+    <div class="container">
+      <div class="row center" style='opacity: 0.9;' id='parallax-bottom'>  
+          <%= simple_form_for NonProfit.new, html: { class: "col s12 new_non_profit white "} do |f| %>
+            <div class="row" >
+                <%= f.input :name,error: 'Username is mandatory, please specify one', wrapper_html: { class: 'input-field col s6 l6'}, input_html: { class: 'validate' } %>
+                <%= f.input :website, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
+                <%= f.input :what_achieve, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
+                <%= f.input :contact, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
+                <%= f.input :contact_info, wrapper_html: { class: 'input-field col s12 l12 ' }, input_html: { class: 'validate' } %>
+                <%= f.input :why, as: :text, wrapper_html: { class: 'input-field col s12 l12 m12 ', style:'textarea1' }, input_html: { class: 'validate ',style:'textarea1', type: 'text' } %>
+                <%= f.button :submit %>
+          </div>
+        <% end %>
+      </div>
+    </div>      
   </div>
   <div class='parallax' > <%= image_tag "background3.jpg", alt: "Unsplashed background img 3" %></div>
-</div>
-
+  </div>
+</div>       
+   
 <footer class="page-footer teal">
   <div class="container">
     <div class="row">
