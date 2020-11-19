@@ -103,6 +103,12 @@
       <div class="container">
         <div class="row center">
           <h5 class="header col s12 light">????????</h5>
+          <%= simple_form_for NonProfit.new, html: { class: "col s12 new_non_profit"} do |f| %>
+             <div class="row" >
+            <%= f.input :name, wrapper_html: { class: 'input-field col s6' }, input_html: { class: 'validate' } %>
+            </div>
+          <% end %>
+  
         </div>
       </div>
     </div>

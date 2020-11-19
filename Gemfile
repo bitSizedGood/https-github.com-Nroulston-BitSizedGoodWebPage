@@ -11,6 +11,8 @@ gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.4.6', require: false
 gem 'materialize-sass', '~> 1.0.0'
 gem 'jquery-rails'
+gem 'simple_form'
+
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
