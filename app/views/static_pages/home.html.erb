@@ -22,7 +22,7 @@
           <h4 class=" col s12 "> Helping Non-Profits solve their Web problems </h4>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal  ">Redy to work with us?</a>
+          <a href="#parallax-bottom" id="download-button" class="btn-large waves-effect waves-light teal  ">Redy to work with us?</a>
         </div>
         <br><br>
 
@@ -90,6 +90,11 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Tell us how we can help you</h4>
+                      <% if flash[:errors] %>
+                     <% flash[:errors].each do |error|   %>
+                     <li class="red"> <%= error %></li>
+                  <% end %>
+                <% end %>
           <p class="left-align light"></p>
         </div>
       </div>
@@ -99,24 +104,26 @@
 
 
   <div class="parallax-container valign-wrapper ">
-    <div class="section no-pad-bot">
+    <div class="section no-pad-bot">              
       <div class="container">
-        <div class="row center" style='opacity: 0.7;' >
+        <div class="row center" style='opacity: 0.9;' id='parallax-bottom'>
           <h5 class="header col s12 light">????????</h5>
-            <%= simple_form_for NonProfit.new, html: { class: "col s12 new_non_profit white center"} do |f| %>
+            <%= simple_form_for NonProfit.new, html: { class: "col s12 new_non_profit white "} do |f| %>
              <div class="row" >
-                  <%= f.input :name, wrapper_html: { class: 'input-field col s6 l6 materialize-textarea ' }, input_html: { class: 'validate' } %>
+                  <%= f.input :name,error: 'Username is mandatory, please specify one', wrapper_html: { class: 'input-field col s6 l6'}, input_html: { class: 'validate' } %>
                   <%= f.input :website, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
                   <%= f.input :what_achieve, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
                   <%= f.input :contact, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
-                  <%= f.input :contact_info, wrapper_html: { class: 'input-field col s6 l6 ' }, input_html: { class: 'validate' } %>
-                  <%= f.input :why, wrapper_html: { class: 'input-field col s6 l6 m6 ' }, input_html: { class: 'validate' } %>
+                  <%= f.input :contact_info, wrapper_html: { class: 'input-field col s12 l12 ' }, input_html: { class: 'validate' } %>
+                  <%= f.input :why, as: :text, wrapper_html: { class: 'input-field col s12 l12 m12 ', style:'textarea1' }, input_html: { class: 'validate ',style:'textarea1', type: 'text' } %>
                   <%= f.button :submit %>
             </div>
           <% end %>
         </div>
       </div>
     </div>
+
+                    
                 
   
                 

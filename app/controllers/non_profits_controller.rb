@@ -7,6 +7,10 @@ class NonProfitsController < ApplicationController
 
     if @non_profit.save
       render :show
+    else
+
+      flash[:errors] =  @non_profit.errors.full_messages
+      redirect_to root_path
     end
 
   end
